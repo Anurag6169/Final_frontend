@@ -206,6 +206,69 @@ const AppointmentDetails = ({ isOpen, onClose, appointmentDetails }) => {
 
 const Profession = () => {
 
+    const getProfessionals = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/erap_backend/get_profession', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+
+            },
+          });
+      
+          if (!response.ok) {
+
+            throw new Error('Failed to fetch professionals');
+          }
+      
+          const professionalsData = await response.json();
+      
+
+          professionalsData.forEach(professional => {
+            console.log('Professional ID:', professional.id);
+            console.log('Name:', professional.name);
+            console.log('Image:', professional.img);
+            console.log('Description:', professional.description);
+          });
+        } catch (error) {
+          console.error('Error during fetch professionals:', error.message);
+        }
+      };
+      
+      const getProfessionalSchedule = async (professionalId) => {
+        try {
+          const response = await fetch(`http://localhost:5000/${professionalId}/schedule`, {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              
+            },
+          });
+      
+          if (!response.ok) {
+      
+            throw new Error('Failed to fetch professional schedule');
+          }
+      
+      
+          const scheduleData = await response.json();
+ 
+          scheduleData.forEach(scheduleItem => {
+            console.log('Schedule Item ID:', scheduleItem.id);
+            console.log('Start Time:', scheduleItem.start_time);
+            console.log('End Time:', scheduleItem.end_time);
+          });
+        } catch (error) {
+          console.error('Error during fetch professional schedule:', error.message);
+        }
+      };
+      
+  
+      const professionalId = '123';
+      getProfessionalSchedule(professionalId);
+      
+      
+
     const [isModalOpen, setModalOpen] = useState(false);
   const [selectedAppointment, setSelectedAppointment] = useState(null);
 

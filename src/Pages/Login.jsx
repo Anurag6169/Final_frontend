@@ -1,6 +1,38 @@
 import "./Login.css";
 
 const Login = () => {
+
+  const login = async (username, password) => {
+    try {
+      const response = await fetch('http://localhost:5000/erap_backend/user_login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        }),
+      });
+  
+      if (!response.ok) {
+
+        throw new Error('Login failed');
+      }
+
+      const data = await response.json();
+      console.log('Login successful', data.token);
+    } catch (error) {
+      console.error('Error during login:', error.message);
+    }
+  };
+  
+  const username = 'example_user';
+  const password = 'example_password';
+  
+  login(username, password);
+  
+
   return (
     <div className="iphone-14-plus-5">
       <div className="frame">

@@ -232,6 +232,40 @@ const DateText = styled.div`
 `;
 
 const Appointment = () => {
+
+    const getServices = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/get_services', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              
+            },
+          });
+      
+          if (!response.ok) {
+         
+            throw new Error('Failed to fetch services');
+          }
+      
+      
+          const servicesData = await response.json();
+      
+  
+          servicesData.forEach(service => {
+            console.log('Service ID:', service.id);
+            console.log('Name:', service.name);
+            console.log('Price:', service.price);
+            console.log('Description:', service.description);
+          });
+        } catch (error) {
+          console.error('Error during fetch services:', error.message);
+        }
+      };
+      
+    
+      
+
   return (
     <AppointmentContainer>
       <Header />

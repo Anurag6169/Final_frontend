@@ -276,6 +276,34 @@ const SelectingScheduleRoot = styled.div`
 `;
 
 const SelectingSchedule = () => {
+
+  const bookAppointment = async (appointmentData) => {
+    try {
+      const response = await fetch('http://localhost:5000/appointments', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        
+        },
+        body: JSON.stringify(appointmentData),
+      });
+  
+      if (!response.ok) {
+       
+        throw new Error('Failed to book appointment');
+      }
+  
+      
+      const bookedAppointment = await response.json();
+ 
+      console.log('Appointment booked successfully', bookedAppointment);
+    } catch (error) {
+      console.error('Error during appointment booking:', error.message);
+    }
+  };
+  
+
+
   return (
     <SelectingScheduleRoot>
       <SelectingScheduleChild />

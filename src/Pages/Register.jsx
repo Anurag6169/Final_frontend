@@ -231,6 +231,36 @@ const RegisterRoot = styled.div`
 `;
 
 const Register = () => {
+
+  const register = async (userData) => {
+    try {
+      const response = await fetch('http://localhost:5000/erap_backend/user_register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+
+        },
+        body: JSON.stringify(userData),
+      });
+  
+      if (!response.ok) {
+
+        throw new Error('Registration failed');
+      }
+  
+   
+      const data = await response.json();
+  
+
+      console.log('Registration successful', data);
+    } catch (error) {
+      console.error('Error during registration:', error.message);
+    }
+  };
+  
+
+  
+
   return (
     <RegisterRoot>
       <RegisterChild />

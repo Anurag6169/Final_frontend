@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SideBar from './Sidebar';
 
 const Nav = styled.div`
   display: flex;
