@@ -1,0 +1,349 @@
+/* .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .login {
+    position: absolute;
+    top: 28px;
+    left: 144px;
+    font-size: 25px;
+  }
+  .email {
+    position: absolute;
+    top: 96px;
+    left: 37px;
+  }
+
+  .password {
+    position: absolute;
+    top: 180px;
+    left: 37px;
+  }
+  .create-new-account {
+    color: #093f68;
+  }
+  .do-not-have-container {
+    position: absolute;
+    top: 271px;
+    left: 69px;
+    text-align: center;
+    display: inline-block;
+    width: 228px;
+  }
+  .frame1 {
+    border: none;
+    font-family: Inter;
+    font-size: 15px;
+    background-color: #02bdf3;
+    position: absolute;
+    top: 120px;
+    left: 29px;
+    border-radius: 10px;
+    width: 308px;
+    height: 41px;
+    overflow: hidden;
+  }
+  .frame2 {
+    border: none;
+    font-family: Inter;
+    font-size: 15px;
+    background-color: #02bdf3;
+    position: absolute;
+    top: 204px;
+    left: 29px;
+    border-radius: 10px;
+    width: 308px;
+    height: 41px;
+    overflow: hidden;
+  }
+  .submit {
+    position: absolute;
+    top: 8px;
+    left: 30px;
+  }
+  .frame3 {
+    position: absolute;
+    top: 321px;
+    left: 128px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #02bdf3;
+    box-sizing: border-box;
+    width: 110px;
+    height: 34px;
+    overflow: hidden;
+  }
+  .frame {
+    position: absolute;
+    top: 186px;
+    left: 31px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 2px solid #02bdf3;
+    box-sizing: border-box;
+    width: 365px;
+    height: 429px;
+    overflow: hidden;
+  }
+  .frame-child {
+    position: absolute;
+    top: 19px;
+    left: 356px;
+    border-top: 2px solid #fff;
+    box-sizing: border-box;
+    width: 46px;
+    height: 2px;
+  }
+  .frame-item {
+    position: absolute;
+    top: 24px;
+    left: 358px;
+    border-top: 2px solid #fff;
+    box-sizing: border-box;
+    width: 24px;
+    height: 2px;
+  }
+  .frame-inner {
+    position: absolute;
+    top: 11px;
+    left: 346px;
+    border-top: 2px solid #fff;
+    box-sizing: border-box;
+    width: 36px;
+    height: 2px;
+  }
+  .rap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .frame5 {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    width: 381px;
+    height: 30px;
+    overflow: hidden;
+  }
+  .frame4 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #0353c9;
+    width: 428px;
+    height: 72px;
+    overflow: hidden;
+    font-size: 25px;
+    color: #fff;
+  }
+  .iphone-14-plus-5 {
+    background-color: #fff;
+    width: 428px;
+    height: 926px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 15px;
+    color: #02bdf3;
+    font-family: Inter;
+  }
+  
+  input::placeholder{
+    color: #fff;
+    text-align: center;
+  } */
+
+
+  /* import styled from "styled-components";
+
+const LoginTitle = styled.b`
+  position: absolute;
+  top: 28px;
+  left: 144px;
+  font-size: 25px;
+`;
+const Email = styled.div`
+  position: absolute;
+  top: 96px;
+  left: 37px;
+`;
+const DoNotHave = styled.span``;
+const CreateNewAccount = styled.span`
+  color: #093f68;
+`;
+const DoNotHaveContainer = styled.div`
+  position: absolute;
+  top: 271px;
+  left: 69px;
+  text-align: center;
+  display: inline-block;
+  width: 228px;
+`;
+const Frame1 = styled.input`
+  border: none;
+  font-family: Inter;
+  font-size: 15px;
+  background-color: #02bdf3;
+  position: absolute;
+  top: 120px;
+  left: 29px;
+  border-radius: 10px;
+  width: 308px;
+  height: 41px;
+  overflow: hidden;
+`;
+const FrameChild = styled.div`
+  position: absolute;
+  top: 23px;
+  left: 0px;
+  border-radius: 10px;
+  background-color: #02bdf3;
+  width: 308px;
+  height: 41px;
+`;
+const Password = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 8px;
+`;
+const Div = styled.div`
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  font-size: 30px;
+  color: #fff;
+`;
+const Frame2 = styled.div`
+  position: absolute;
+  top: 185px;
+  left: 29px;
+  width: 308px;
+  height: 64px;
+  overflow: hidden;
+`;
+const Submit = styled.div`
+  position: absolute;
+  top: 8px;
+  left: 30px;
+`;
+const Frame3 = styled.div`
+  position: absolute;
+  top: 321px;
+  left: 128px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #02bdf3;
+  box-sizing: border-box;
+  width: 110px;
+  height: 34px;
+  overflow: hidden;
+`;
+const Frame = styled.div`
+  position: absolute;
+  top: 186px;
+  left: 31px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 2px solid #02bdf3;
+  box-sizing: border-box;
+  width: 365px;
+  height: 429px;
+  overflow: hidden;
+`;
+const FrameItem = styled.div`
+  position: absolute;
+  top: 19px;
+  left: 356px;
+  border-top: 2px solid #fff;
+  box-sizing: border-box;
+  width: 46px;
+  height: 2px;
+`;
+const FrameInner = styled.div`
+  position: absolute;
+  top: 24px;
+  left: 358px;
+  border-top: 2px solid #fff;
+  box-sizing: border-box;
+  width: 24px;
+  height: 2px;
+`;
+const LineDiv = styled.div`
+  position: absolute;
+  top: 11px;
+  left: 346px;
+  border-top: 2px solid #fff;
+  box-sizing: border-box;
+  width: 36px;
+  height: 2px;
+`;
+const Rap = styled.b`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+`;
+const Frame5 = styled.div`
+  position: absolute;
+  top: 21px;
+  left: 20px;
+  width: 381px;
+  height: 30px;
+  overflow: hidden;
+`;
+const Frame4 = styled.div`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #0353c9;
+  width: 428px;
+  height: 72px;
+  overflow: hidden;
+  font-size: 25px;
+  color: #fff;
+`;
+const LoginRoot = styled.div`
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 926px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 15px;
+  color: #02bdf3;
+  font-family: Inter;
+`;
+
+const Login = () => {
+  return (
+    <LoginRoot>
+      <Frame>
+        <LoginTitle>LOGIN</LoginTitle>
+        <Email>Email:</Email>
+        <DoNotHaveContainer>
+          <DoNotHave>{`Do not have an account? `}</DoNotHave>
+          <CreateNewAccount>Create new account</CreateNewAccount>
+          <DoNotHave> here!</DoNotHave>
+        </DoNotHaveContainer>
+        <Frame1 placeholder="johndoe@gmail.com" type="text" />
+        <Frame2>
+          <FrameChild />
+          <Password>Password:</Password>
+          <Div>............</Div>
+        </Frame2>
+        <Frame3>
+          <Submit>Submit</Submit>
+        </Frame3>
+      </Frame>
+      <Frame4>
+        <FrameItem />
+        <Frame5>
+          <FrameInner />
+          <LineDiv />
+          <Rap>RAP</Rap>
+        </Frame5>
+      </Frame4>
+    </LoginRoot>
+  );
+};
+
+export default Login; */
